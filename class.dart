@@ -2,10 +2,16 @@ class Student {
   String? name;
   int? age;
   int? grade;
+  // declare constructor at this moment
+  Student(String name, int age, int grade) {
+    this.name = name;
+    this.age = age;
+    this.grade = grade;
+  }
   void info() {
-    print(name);
-    print(age);
-    print(grade);
+    print(this.name);
+    print(this.age);
+    print(this.grade);
   }
 }
 
@@ -26,4 +32,6 @@ void main() {
   book.author = "Simon";
   book.price = 1200;
   book.display();
+  Student student = Student("Simon", 14, 9);
+  student.info();
 }
