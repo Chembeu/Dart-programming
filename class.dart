@@ -12,6 +12,7 @@ class Student {
     print(this.name);
     print(this.age);
     print(this.grade);
+    print("constructor was well created");
   }
 }
 
@@ -26,6 +27,18 @@ class Book {
   }
 }
 
+class Patient {
+  String? name;
+  int? age;
+  String? disease;
+  Patient(this.name, this.age, this.disease);
+  void display() {
+    print(this.name);
+    print(this.age);
+    print(this.disease);
+  }
+}
+
 void main() {
   Book book = Book();
   book.name = "Animal farm";
@@ -34,4 +47,6 @@ void main() {
   book.display();
   Student student = Student("Simon", 14, 9);
   student.info();
+  Patient patient = Patient("Adam", 19, "Malaria");
+  patient.display();
 }
